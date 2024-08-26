@@ -1,0 +1,57 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Judiciary {
+  appointmentDate DateTime?
+  createdAt       DateTime  @default(now())
+  description     String?
+  id              String    @id @default(cuid())
+  name            String?
+  updatedAt       DateTime  @updatedAt
+}
+
+model Article {
+  content      String?
+  createdAt    DateTime  @default(now())
+  id           String    @id @default(cuid())
+  relevantDate DateTime?
+  title        String?
+  updatedAt    DateTime  @updatedAt
+}
+
+model Legislature {
+  createdAt       DateTime  @default(now())
+  description     String?
+  establishedDate DateTime?
+  id              String    @id @default(cuid())
+  name            String?
+  updatedAt       DateTime  @updatedAt
+}
+
+model Executive {
+  createdAt     DateTime  @default(now())
+  description   String?
+  id            String    @id @default(cuid())
+  name          String?
+  termEndDate   DateTime?
+  termStartDate DateTime?
+  updatedAt     DateTime  @updatedAt
+}
+
+model User {
+  createdAt DateTime @default(now())
+  email     String?  @unique
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     Json
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
