@@ -17,6 +17,10 @@ import { AdoptionRequestModule } from "./adoptionRequest/adoptionRequest.module"
 import { FundModule } from "./fund/fund.module";
 import { HomelessPersonModule } from "./homelessPerson/homelessPerson.module";
 import { DonationModule } from "./donation/donation.module";
+import { PublicUserModule } from "./publicUser/publicUser.module";
+import { HomelessIndividualModule } from "./homelessIndividual/homelessIndividual.module";
+import { FundBalanceModule } from "./fundBalance/fundBalance.module";
+import { LocationModule } from "./location/location.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -42,6 +46,10 @@ import { AuthModule } from "./auth/auth.module";
     FundModule,
     HomelessPersonModule,
     DonationModule,
+    PublicUserModule,
+    HomelessIndividualModule,
+    FundBalanceModule,
+    LocationModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,

@@ -25,6 +25,22 @@ import { DonationList } from "./donation/DonationList";
 import { DonationCreate } from "./donation/DonationCreate";
 import { DonationEdit } from "./donation/DonationEdit";
 import { DonationShow } from "./donation/DonationShow";
+import { PublicUserList } from "./publicUser/PublicUserList";
+import { PublicUserCreate } from "./publicUser/PublicUserCreate";
+import { PublicUserEdit } from "./publicUser/PublicUserEdit";
+import { PublicUserShow } from "./publicUser/PublicUserShow";
+import { HomelessIndividualList } from "./homelessIndividual/HomelessIndividualList";
+import { HomelessIndividualCreate } from "./homelessIndividual/HomelessIndividualCreate";
+import { HomelessIndividualEdit } from "./homelessIndividual/HomelessIndividualEdit";
+import { HomelessIndividualShow } from "./homelessIndividual/HomelessIndividualShow";
+import { FundBalanceList } from "./fundBalance/FundBalanceList";
+import { FundBalanceCreate } from "./fundBalance/FundBalanceCreate";
+import { FundBalanceEdit } from "./fundBalance/FundBalanceEdit";
+import { FundBalanceShow } from "./fundBalance/FundBalanceShow";
+import { LocationList } from "./location/LocationList";
+import { LocationCreate } from "./location/LocationCreate";
+import { LocationEdit } from "./location/LocationEdit";
+import { LocationShow } from "./location/LocationShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -85,6 +101,34 @@ const App = (): React.ReactElement => {
           edit={DonationEdit}
           create={DonationCreate}
           show={DonationShow}
+        />
+        <Resource
+          name="PublicUser"
+          list={PublicUserList}
+          edit={PublicUserEdit}
+          create={PublicUserCreate}
+          show={PublicUserShow}
+        />
+        <Resource
+          name="HomelessIndividual"
+          list={HomelessIndividualList}
+          edit={HomelessIndividualEdit}
+          create={HomelessIndividualCreate}
+          show={HomelessIndividualShow}
+        />
+        <Resource
+          name="FundBalance"
+          list={FundBalanceList}
+          edit={FundBalanceEdit}
+          create={FundBalanceCreate}
+          show={FundBalanceShow}
+        />
+        <Resource
+          name="Location"
+          list={LocationList}
+          edit={LocationEdit}
+          create={LocationCreate}
+          show={LocationShow}
         />
       </Admin>
     </div>
